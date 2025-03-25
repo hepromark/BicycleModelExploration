@@ -38,9 +38,6 @@ class BicycleSolver:
         """
         Generalized iterative solver that solves Y' = func using the specified iteration method.
         """
-        if y_accel_hist != None:
-            print("Storing accel values")
-
         y = init_vector.copy()
         res = []
         t = init_t
@@ -52,7 +49,7 @@ class BicycleSolver:
         return y, np.array(res)
     
     def check_stability(self):
-        eigenvalues = np.linalg.eig(self.A).eigenvalues
+        eigenvalues = np.linalg.eig(self.A)[0]
         for eigenvalue in eigenvalues:
             if eigenvalue > 0:
                 return False
@@ -120,7 +117,6 @@ class BicycleSolver:
 
         if y_accel_hist != None:
             y_accel_hist.append((k1 + 2*k2 + 2*k3 + k4) / 6)
-            print("appended")
 
         return y_curr + step_size / 6 * (k1 + 2*k2 + 2*k3 + k4)
     

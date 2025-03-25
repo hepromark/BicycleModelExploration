@@ -1,4 +1,9 @@
 import numpy as np
+from BicycleSolver import BicycleSolver
+
+
+def const_delta(t):
+    return 0.1
 
 def b1():
     u_values_km = np.array([20, 50, 75, 100, 200, 220,240,260,280,300])
@@ -27,7 +32,9 @@ def b1():
             u = u
         )
 
-        print(y_accel_hist)
+        def task_a_model(y, t) -> np.ndarray:
+            return solver.bicycle_model(solver.A, solver.B, y, const_delta(t))
+
         res, hist = solver.solve(solver.rk4, task_a_model, init_vector, init_t, max_iter, step_size, y_accel_hist=y_accel_hist)
 
         histories.append(hist)
@@ -64,8 +71,16 @@ def b2():
             u = u
         )
 
+        def task_a_model(y, t) -> np.ndarray:
+            return solver.bicycle_model(solver.A, solver.B, y, const_delta(t))
+
         if solver.check_stability():
             print(f'{u * 3600/1000:.4f}km/h is stable')
         else:
             print(f'{u * 3600/1000:.4f}km/h is unstable')
             break
+
+        
+if __name__=="__main__":
+    b1()
+    b2()

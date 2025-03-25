@@ -1,18 +1,18 @@
 import numpy as np
+import matplotlib.pyplot as plt
+
+from BicycleSolver import BicycleSolver
+
+# Grid Independence Check
+def const_delta(t):
+    return 0.1
 
 def a2():
-    # Grid Independence Check
-    def const_delta(t):
-        return 0.1
 
-    highly_exact_step_size = 0.0000001
+    highly_exact_step_size = 0.000001
 
     init_vector = np.array([[0.0],[0.0]], dtype=np.float64)
     t_final = 1
-    init_t = 0
-
-    euler_results = []
-    rk4_results = []
 
     solver = BicycleSolver(
         m = 1400,
@@ -28,12 +28,10 @@ def a2():
         return solver.bicycle_model(solver.A, solver.B, y, const_delta(t))
 
     max_iteration = int(t_final / highly_exact_step_size)
-    _, exact_sol = solver.solve(solver.rk4, task_a_model, init_vector, 0, max_iteration, highly_exact_step_size, t_final)
+    _, exact_sol = solver.solve(solver.rk4, task_a_model, init_vector, 0, max_iteration, highly_exact_step_size)
 
     log_step_size = np.linspace(-1, -3, 3)
-    print(log_step_size)
     grid_values = [np.power(10, i) for i in log_step_size]
-    print(grid_values)
 
     for name, iterator in [("RK4", solver.rk4), ("Euler's", solver.eulers_method)]:
         log_error = []
@@ -53,3 +51,6 @@ def a2():
     plt.legend()
     plt.grid()
     plt.show()
+
+if __name__ == "__main__":
+    a2()
