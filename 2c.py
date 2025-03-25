@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+from BicycleSolver import BicycleSolver
+
 def const_delta(t):
         return 0.1
 
@@ -421,3 +423,8 @@ def c3():
 
 
     solver.visualize_results(histories, labels, init_t, t_final, max_iter, title= "Icy Conditions with Winter Tires")
+
+if __name__ == "__main__":
+    c1()
+    c2()
+    c3()
