@@ -4,5 +4,5 @@ This project explores the dynamics of a bicycle model, commonly used in vehicle 
 
 This project was conducted as a part of ME 303 - Advanced Calculus. The report for the project is avaliable [here](docs/report.pdf)
 
-![Bicycle Model Diagram](model.png)
+![Bicycle Model Diagram](docs/model.png)
 
