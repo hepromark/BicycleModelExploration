@@ -23,7 +23,7 @@ If both eigenvalues of A < 0: The state will asymtote towards a finite value.
 - **We define this to be "stable".**
 
 ### Example: Varying Tire Traction
-![alt text](image.png)
+![alt text](docs/image.png)
 
 As front cornering stiffness varies, there is a boundary (in red) where instability occurs. As eigenvalues come in pairs, if either point in the pair crosses the red boundary onto the positive real axis, the vehicle will become impossible to control.
 
