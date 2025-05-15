@@ -9,7 +9,7 @@ The findings for this exploration is avaliable [here](docs/report.pdf) in full
 ![Bicycle Model Diagram](docs/model.png)
 From this 2-axis bicycle model with tire traction, we derived the governing matrix with respect to model parameters, such as mass, velocity, tire cornering stiffness, etc...
 
-## Stability Definition
+# Stability Definition
 As our bicycle model can be fully described with the matrix system:
 
 ![Matrix System](docs/latex_model.png)
@@ -22,7 +22,7 @@ If 1 or more eigenvalue of A > 0: the solution (i.e. state as a function of time
 If both eigenvalues of A < 0: The state will asymtote towards a finite value. 
 - **We define this to be "stable".**
 
-### Example: Varying Tire Traction
+# Example: Varying Tire Traction
 ![alt text](docs/image.png)
 
 As front cornering stiffness varies, there is a boundary (in red) where instability occurs. As eigenvalues come in pairs, if either point in the pair crosses the red boundary onto the positive real axis, the vehicle will become impossible to control. 
