@@ -33,4 +33,4 @@ Within the stable region, there is further divide between purely real and comple
 
 - Green line is an underdamped system with oscillations. 
 - Orange line is an overdamped system without oscillations. 
-- Blue is an underdamped (unstable) system. 
+- Blue is an unstable system. 
