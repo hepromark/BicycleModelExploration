@@ -14,7 +14,7 @@ As our bicycle model can be fully described with the matrix system:
 
 ![Matrix System](docs/latex_model.png)
 
-which can be equivalent viewed as a 2nd order ODE with whose homogenous roots characterized by the eigenvalues of A. 
+which can be equivalent viewed as a 2nd order ODE whose homogenous roots characterized by the eigenvalues of A. 
 
 If 1 or more eigenvalue of A > 0: the solution (i.e. state as a function of time) will explode to infinity due to haveing a positive exponent. 
 - **We define this to be "unstable".**
