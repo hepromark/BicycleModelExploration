@@ -25,8 +25,12 @@ If both eigenvalues of A < 0: The state will asymtote towards a finite value.
 ### Example: Varying Tire Traction
 ![alt text](docs/image.png)
 
-As front cornering stiffness varies, there is a boundary (in red) where instability occurs. As eigenvalues come in pairs, if either point in the pair crosses the red boundary onto the positive real axis, the vehicle will become impossible to control.
+As front cornering stiffness varies, there is a boundary (in red) where instability occurs. As eigenvalues come in pairs, if either point in the pair crosses the red boundary onto the positive real axis, the vehicle will become impossible to control. 
+
+Within the stable region, there is further divide between purely real and complex eigenvalues; purely **real eigenvalues result in overdamping** and **complex eigenvalues lead to oscillations**.
 
 ![alt text](docs/image2.png)
 
-- Green line denotes an underdamped system 
+- Green line is an underdamped system with oscillations. 
+- Orange line is an overdamped system without oscillations. 
+- Blue is an underdamped (unstable) system. 
