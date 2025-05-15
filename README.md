@@ -27,3 +27,6 @@ If both eigenvalues of A < 0: The state will asymtote towards a finite value.
 
 As front cornering stiffness varies, there is a boundary (in red) where instability occurs. As eigenvalues come in pairs, if either point in the pair crosses the red boundary onto the positive real axis, the vehicle will become impossible to control.
 
+![alt text](docs/image2.png)
+
+- Green line denotes an underdamped system 
